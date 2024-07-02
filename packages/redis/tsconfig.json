@@ -1,18 +1,8 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "target": "ES2021",
-    "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "skipLibCheck": true
+    "outDir": "./lib",
+    "rootDir": "./src"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts", "tests"]
+  "include": ["./src"]
 }

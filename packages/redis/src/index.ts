@@ -1,7 +1,5 @@
-import { sum } from 'lodash'
-
-export function add(a: number, b: number) {
-  return sum([a, b])
-}
-
-console.log(add(1, 2))
+export * from './constants';
+export * from './interface';
+export * from './redis-core.module';
+export * from './redis.decorator';
+export * from './redis.module';

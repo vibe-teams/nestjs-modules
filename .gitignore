@@ -26,7 +26,8 @@ coverage
 out/
 build
 dist
-
+lib
+tsconfig.tsbuildinfo
 
 # Debug
 npm-debug.log*

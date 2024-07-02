@@ -10,5 +10,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "@nestjs/common": "^10.x",
+    "@nestjs/core": "^10.x",
+    "ioredis": "^5.x"
+  },
+  "devDependencies": {
+    "ioredis": "^5.4.1"
+  }
 }
