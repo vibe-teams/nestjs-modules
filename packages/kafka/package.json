@@ -8,5 +8,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.x",
+    "@nestjs/common": "^10.x",
+    "@nestjs/core": "^10.x",
+    "@nestjs/microservices": "^10.x",
+    "kafkajs": "^2.x"
+  },
+  "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.3.0",
+    "kafkajs": "^2.2.4"
+  }
 }
