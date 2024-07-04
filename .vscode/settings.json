@@ -16,4 +16,7 @@
   "cSpell.words": [
     "NACOS"
   ],
+  "[markdown]": {
+    "editor.defaultFormatter": "mervin.markdown-formatter"
+  },
 }
