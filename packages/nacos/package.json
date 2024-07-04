@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "nacos": "^2.6.0"
+  },
+  "peerDependencies": {
+    "nacos": "^2.x"
+  }
 }
