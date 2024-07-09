@@ -1,9 +1,9 @@
-import type { Deserializer } from '@nestjs/microservices';
-import { Logger } from '@nestjs/common/services/logger.service';
-import type { KafkaResponse } from '../interface';
 import { SchemaRegistry } from '@kafkajs/confluent-schema-registry';
-import type { SchemaRegistryAPIClientArgs } from '@kafkajs/confluent-schema-registry/dist/api';
 import type { SchemaRegistryAPIClientOptions } from '@kafkajs/confluent-schema-registry/dist/@types';
+import type { SchemaRegistryAPIClientArgs } from '@kafkajs/confluent-schema-registry/dist/api';
+import { Logger } from '@nestjs/common/services/logger.service';
+import type { Deserializer } from '@nestjs/microservices';
+import type { KafkaResponse } from '../interface';
 import { KafkaResponseDeserializer } from './kafka-response.deserializer';
 
 export class KafkaAvroResponseDeserializer

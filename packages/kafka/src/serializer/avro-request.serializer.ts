@@ -1,9 +1,9 @@
-import type { Serializer } from '@nestjs/microservices';
-import { Logger } from '@nestjs/common';
 import { SchemaRegistry } from '@kafkajs/confluent-schema-registry';
-import type { SchemaRegistryAPIClientArgs } from '@kafkajs/confluent-schema-registry/dist/api';
 import type { SchemaRegistryAPIClientOptions } from '@kafkajs/confluent-schema-registry/dist/@types';
-import type { KafkaMessageSend, KafkaMessageObject } from '../interface';
+import type { SchemaRegistryAPIClientArgs } from '@kafkajs/confluent-schema-registry/dist/api';
+import { Logger } from '@nestjs/common';
+import type { Serializer } from '@nestjs/microservices';
+import type { KafkaMessageObject, KafkaMessageSend } from '../interface';
 
 type KafkaAvroRequestSerializerSchema = {
   topic: string;

@@ -3,15 +3,15 @@ import {
   Global,
   Module,
   type Provider,
-} from "@nestjs/common";
-import { KAFKA_MODULE_OPTIONS } from "./constants";
+} from '@nestjs/common';
+import { KAFKA_MODULE_OPTIONS } from './constants';
 import type {
   KafkaModuleOption,
   KafkaModuleOptionsAsync,
   KafkaOptionsFactory,
-} from "./interface";
-import { KafkaModuleOptionsProvider } from "./kafka-module-options.provider";
-import { KafkaService } from "./kafka.service";
+} from './interface';
+import { KafkaModuleOptionsProvider } from './kafka-module-options.provider';
+import { KafkaService } from './kafka.service';
 
 @Global()
 @Module({})

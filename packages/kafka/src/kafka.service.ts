@@ -1,23 +1,31 @@
-import { Injectable, type OnModuleDestroy, type OnModuleInit } from '@nestjs/common';
 import {
+  Injectable,
+  Logger,
+  type OnModuleDestroy,
+  type OnModuleInit,
+} from '@nestjs/common';
+import {
+  type Deserializer,
+  KafkaLogger,
+  type Serializer,
+} from '@nestjs/microservices';
+import {
+  type Admin,
   type Consumer,
   Kafka,
+  type Offsets,
   type Producer,
   type RecordMetadata,
-  type Admin,
   type SeekEntry,
   type TopicPartitionOffsetAndMetadata,
-  type Offsets,
 } from 'kafkajs';
-import { type Deserializer, KafkaLogger, type Serializer } from '@nestjs/microservices';
-import { Logger } from '@nestjs/common';
 import { KafkaResponseDeserializer } from './deserializer/kafka-response.deserializer';
-import { KafkaRequestSerializer } from './serializer/kafka-request.serializer';
 import type {
-  KafkaModuleOption,
   KafkaMessageSend,
+  KafkaModuleOption,
   KafkaTransaction,
 } from './interface';
+import { KafkaRequestSerializer } from './serializer/kafka-request.serializer';
 
 import { SUBSCRIBER_MAP, SUBSCRIBER_OBJECT_MAP } from './kafka.decorator';
 
@@ -222,8 +230,7 @@ export class KafkaService implements OnModuleInit, OnModuleDestroy {
    * @param options
    */
   protected initializeSerializer(options: KafkaModuleOption['options']): void {
-    this.serializer =
-      options?.serializer || new KafkaRequestSerializer();
+    this.serializer = options?.serializer || new KafkaRequestSerializer();
   }
 
   /**

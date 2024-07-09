@@ -6,9 +6,7 @@ import {
   type OnModuleInit,
 } from '@nestjs/common';
 import { NacosConfigClient } from 'nacos';
-import {
-  NACOS_CONFIG_OPTION
-} from './constants';
+import { NACOS_CONFIG_OPTION } from './constants';
 import type { ClientOptions, Listener } from './interface';
 // import { NacosConfigClient, ClientOptions } from "nacos";
 
@@ -17,7 +15,9 @@ export class NacosConfigService implements OnModuleInit, OnModuleDestroy {
   private configClient: NacosConfigClient = null;
   private readonly logger = new Logger(NacosConfigService.name);
   private readonly listeners = new Array<Listener>();
-  constructor(@Inject(NACOS_CONFIG_OPTION) private readonly options: ClientOptions) {}
+  constructor(
+    @Inject(NACOS_CONFIG_OPTION) private readonly options: ClientOptions,
+  ) {}
 
   async onModuleInit() {
     this.configClient = new NacosConfigClient(this.options);

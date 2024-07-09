@@ -1,6 +1,6 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { KAFKA_MODULE_OPTIONS } from "./constants";
-import type { KafkaModuleOption } from "./interface";
+import { Inject, Injectable } from '@nestjs/common';
+import { KAFKA_MODULE_OPTIONS } from './constants';
+import type { KafkaModuleOption } from './interface';
 
 @Injectable()
 export class KafkaModuleOptionsProvider {
